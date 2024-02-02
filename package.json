@@ -1,8 +1,15 @@
 {
   "devDependencies": {
-    "prisma": "^5.9.1"
+    "@types/node": "^20.11.16",
+    "prisma": "^5.9.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@prisma/client": "^5.9.1"
+    "@prisma/client": "^5.9.1",
+    "dotenv": "^16.4.1"
+  },
+  "scripts": {
+    "dev": "npx ts-node-dev --respawn src/index.ts"
   }
 }

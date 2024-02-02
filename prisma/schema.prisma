@@ -12,7 +12,7 @@ datasource db {
 
 model pessoas {
   id Int @id @default(autoincrement())
-  email String @unique
-  nome String
-  celular Int 
+  email String @db.VarChar(255) @unique
+  nome String @db.VarChar(255)
+  celular String @db.VarChar(11)
 }
