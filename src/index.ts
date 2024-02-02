@@ -1,19 +1,20 @@
-import express from 'express'
-import { PrismaClient } from '@prisma/client'
-
+import express from 'express';
+import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
-const app = express()
-app.use(express.json())
+const app = express();
+app.use(express.json());
 
-const port = process.env.PORT
+const port = process.env.PORT;
 
 app.get("/", async (request, response) => {
-    const users = await prisma.pessoas.findMany()
-    console.log(users)
-    return response.json(users)
-})
+    const users = await prisma.pessoas.findMany();
+    console.log(users);
+    return response.json(users);
+});
 
+
+// Função deleta USER pelo ID
 // (async () => {
 //     const removed = await prisma.pessoas.delete({
 //             where:{
@@ -23,7 +24,7 @@ app.get("/", async (request, response) => {
 //     console.log(removed)
 // })();
 
-
+// Função Cria novo USERS
 // (async () => {
 //     const users = await prisma.pessoas.create({
 //         data:{
@@ -35,14 +36,16 @@ app.get("/", async (request, response) => {
 //     console.log(users)
 // })();
 
+// Função conta quantos USERS EXISTEM
 // (async () => {
 //     const users = await prisma.pessoas.count()
 //     console.log(users)
 // })();
 
+// Função Mostra todos os USERS
 // (async () => {
 //     const users = await prisma.pessoas.findMany()
 //     console.log(users)
 // })();
 
-app.listen(port, ()=>{console.log("Server is running on " + port)})
+app.listen(port, () => {console.log("Server is running on " + port)});
