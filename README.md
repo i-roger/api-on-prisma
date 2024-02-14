@@ -1,11 +1,27 @@
 Será necessário instalar as depêndencias abaixo!
+
 @types/express
+
+
 @types/node
+
+
 prisma
+
+
 ts-node
+
+
 typescript
+
+
 dotenv
+
+
 express
+
+################################################################################
+
 
 -> Configuração do tsconfig.json - Usar a padrão do site do PRISMA
 
