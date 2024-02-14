@@ -7,18 +7,18 @@ typescript
 dotenv
 express
 
--> Configuração do TSCONFIG.JSON - Usar a padrão do site do PRISMA
+-> Configuração do tsconfig.json - Usar a padrão do site do PRISMA
 
--> Criar o arquivo VERCEL.JSON e fazer as devidas configurações para rodar
+-> Criar o arquivo vercel.json e fazer as devidas configurações para rodar
 a API na VERCEL.
 
 
 
 
--> Para gerar o modelo que você criou no SCHEMA.PRISMA
+-> Para gerar o modelo que você criou no schema.prisma
 npx prisma generate
 
--> Para enviar todas as modificações feitas no SCHEMA.PRISMA
+-> Para enviar todas as modificações feitas no schema.prisma
 npx prisma db push
 
 -> Para rodar aplicação localhost: (As alterações serão feitas no DB!!!!)
