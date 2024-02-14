@@ -43,9 +43,9 @@ app.get("/", async (request, response) => {
 // })();
 
 // Função Mostra todos os USERS
-// (async () => {
-//     const users = await prisma.pessoas.findMany()
-//     console.log(users)
-// })();
+(async () => {
+    const users = await prisma.pessoas.findMany()
+    console.log(users)
+})();
 
 app.listen(port, () => {console.log("Server is running on " + port)});
