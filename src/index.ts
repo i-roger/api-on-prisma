@@ -9,7 +9,6 @@ const prisma = new PrismaClient();
 
 app.get("/", async (request, response) => {
     const users = await prisma.pessoas.findMany();
-    // console.log(users);
     return response.json(users);
 });
 
