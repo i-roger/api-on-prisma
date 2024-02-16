@@ -9,7 +9,7 @@ const port = process.env.PORT;
 
 app.get("/", async (request, response) => {
     const users = await prisma.pessoas.findMany();
-    console.log(users);
+    // console.log(users);
     return response.json(users);
 });
 
@@ -25,22 +25,22 @@ app.get("/", async (request, response) => {
 // })();
 
 // Função Cria novo USERS
-(async () => {
-    const users = await prisma.pessoas.create({
-        data:{
-            nome:"not easy 4ever",
-            email:"noteasy@mail.com",
-            celular: "2192452256"
-        }
-    })
-    console.log(users)
-})();
-
-// Função conta quantos USERS EXISTEM
 // (async () => {
-//     const users = await prisma.pessoas.count()
+//     const users = await prisma.pessoas.create({
+//         data:{
+//             nome:"not easy 4ever",
+//             email:"noteasy@mail.com",
+//             celular: "2192452256"
+//         }
+//     })
 //     console.log(users)
 // })();
+
+// Função conta quantos USERS EXISTEM
+(async () => {
+    const users = await prisma.pessoas.count()
+    console.log(users)
+})();
 
 // Função Mostra todos os USERS
 // (async () => {
