@@ -13,6 +13,6 @@
   },
   "scripts": {
     "dev": "npx ts-node-dev --respawn src/index.ts",
-    "vercel-build": "npx prisma migrate deploy"
+    "vercel-build": "npx prisma generate deploy"
   }
 }
