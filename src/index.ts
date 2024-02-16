@@ -37,10 +37,10 @@ app.get("/", async (request, response) => {
 // })();
 
 // Função conta quantos USERS EXISTEM
-(async () => {
-    const users = await prisma.pessoas.count()
-    console.log(users)
-})();
+// (async () => {
+//     const users = await prisma.pessoas.count()
+//     console.log(users)
+// })();
 
 // Função Mostra todos os USERS
 // (async () => {
