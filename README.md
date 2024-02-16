@@ -40,6 +40,9 @@ a API na VERCEL.
 configure o script em package.json para rodar a API na vercel
  "vercel-build": "npx prisma migrate deploy"
 
+ Em caso de Error -> SERVERLESS FUNCTION FAILED
+  "vercel-build": "npx prisma generate deploy"
+
 
 OBSERVAÇÃO :
 -> Para rodar aplicação localhost: (As alterações serão feitas no DB!!!!)
