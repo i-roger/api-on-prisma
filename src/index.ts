@@ -27,9 +27,9 @@ app.get("/", async (request, response) => {
 // (async () => {
 //     const users = await prisma.pessoas.create({
 //         data:{
-//             nome:"not easy 4ever",
-//             email:"noteasy@mail.com",
-//             celular: "2192452256"
+//             nome:"John Wick",
+//             email:"johnwick@mail.com",
+//             celular: "2197777777"
 //         }
 //     })
 //     console.log(users)
