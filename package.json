@@ -12,6 +12,7 @@
     "express": "^4.18.2"
   },
   "scripts": {
-    "dev": "npx ts-node-dev --respawn src/index.ts"
+    "dev": "npx ts-node-dev --respawn src/index.ts",
+    "vercel-build": "npx prisma migrate deploy"
   }
 }
