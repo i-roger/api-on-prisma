@@ -1,11 +1,11 @@
 import express from 'express';
 import { PrismaClient } from '@prisma/client';
-const prisma = new PrismaClient();
 
 const app = express();
 app.use(express.json());
 
 const port = process.env.PORT;
+const prisma = new PrismaClient();
 
 app.get("/", async (request, response) => {
     const users = await prisma.pessoas.findMany();
