@@ -7,7 +7,7 @@ app.use(express.json());
 const cors = require('cors');
 const corsOptions = {
     credentials: true,
-    origin: ['http://localhost:3000', 'http://localhost:80']
+    origin: ['https://frontend-api-on-prisma.vercel.app/', 'http://localhost:80']
 }
 
 app.use(cors(corsOptions));
