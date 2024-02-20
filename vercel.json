@@ -14,7 +14,6 @@
     ],
     "headers": [
         {
-        "value":"true",
         "Access-Control-Allow-Origin": "*"
         }
     ]
