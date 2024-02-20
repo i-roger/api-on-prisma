@@ -10,7 +10,7 @@
         {
             "src": "(.*)",
             "dest": "src/index.ts",
-            "credentials": true,
+            "credentials": "true",
             "Access-Control-Allow-Origin": "*"
         }
     ]
