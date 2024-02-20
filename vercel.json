@@ -10,8 +10,13 @@
         {
             "src": "(.*)",
             "dest": "src/index.ts",
-            "credentials": "true",
-            "Access-Control-Allow-Origin": "*"
+        }
+    ],
+    "headers": [
+        {
+        "key":"x-authorized",
+        "value":"true",
+        "Access-Control-Allow-Origin": "*"
         }
     ]
 }
