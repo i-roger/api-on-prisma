@@ -14,7 +14,12 @@
     ],
     "headers": [
       {
-        "Access-Control-Allow-Origin": "*"
+        "source": "/index.ts",
+        "headers": [
+          {
+            "Access-Control-Allow-Origin": "*"
+          }
+        ]
       }
     ]
 }
