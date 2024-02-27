@@ -1,8 +1,6 @@
 import express from 'express';
 import { PrismaClient } from '@prisma/client';
 
-const app = express();
-app.use(express.json());
 
 const cors = require('cors');
 const corsOptions = {
@@ -10,7 +8,9 @@ const corsOptions = {
     origin: ['https://frontend-api-on-prisma.vercel.app/', 'http://localhost:80']
 }
 
-app.use(cors(corsOptions));
+const app = express();
+app.use(cors(corsOptions)); 
+app.use(express.json());
 
 
 const port = process.env.PORT;
