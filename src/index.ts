@@ -2,21 +2,14 @@ import express from 'express';
 import { PrismaClient } from '@prisma/client';
 
 
-const cors = require('cors');
-const corsOptions = {
-    credentials: true,
-    origin: ['https://frontend-api-on-prisma.vercel.app/', 'http://localhost:80']
-}
-
 const app = express();
-app.use(cors(corsOptions)); 
 app.use(express.json());
 
 
 const port = process.env.PORT;
 const prisma = new PrismaClient();
 
-app.get("/", cors(corsOptions), async (request, response) => {
+app.get("/", async (request, response) => {
     const users = await prisma.pessoas.findMany();
     return response.json(users);
 });
