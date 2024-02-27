@@ -10,7 +10,6 @@ const prisma = new PrismaClient();
 
 app.get("/", async (request, response) => {
     const users = await prisma.pessoas.findMany();
-    response.send(response.json(users))
     return response.json(users);
 });
 
