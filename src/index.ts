@@ -1,7 +1,6 @@
 import express from 'express';
 import { PrismaClient } from '@prisma/client';
 
-
 const app = express();
 app.use(express.json());
 
@@ -11,6 +10,7 @@ const prisma = new PrismaClient();
 
 app.get("/", async (request, response) => {
     const users = await prisma.pessoas.findMany();
+    response.send(response.json(users))
     return response.json(users);
 });
 
