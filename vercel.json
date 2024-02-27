@@ -1,46 +1,15 @@
 {
-  "headers": [
-    {
-      "source": "/src/index.ts",
-      "use": "@vercel/node",
-      "headers": [
+    "version": 2,
+    "builds": [
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
+        "src": "src/index.ts",
+        "use": "@vercel/node"
         }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
+    ],
+    "routes": [
         {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
+            "src": "(.*)",
+            "dest": "src/index.ts"
         }
-      ]
-    },
-    {
-      "source": "/src/index.ts",
-      "has": [
-        {
-          "type": "query",
-          "key": "authorized"
-        }
-      ],
-      "headers": [
-        {
-          "key": "x-authorized",
-          "value": "true"
-        }
-      ]
-    }
-  ]
+    ]
 }
