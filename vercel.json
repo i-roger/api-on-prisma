@@ -1,7 +1,8 @@
 {
   "headers": [
     {
-      "source": "/index.ts",
+      "source": "/src/index.ts",
+      "use": "@vercel/node",
       "headers": [
         {
           "key": "Cache-Control",
@@ -27,7 +28,7 @@
       ]
     },
     {
-      "source": "/(.*)",
+      "source": "/src/index.ts",
       "has": [
         {
           "type": "query",
